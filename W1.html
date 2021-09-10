@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<script src="https：//cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<style>
+    .title{
+        color: blue;
+        background-color: rgb(8, 18, 158);
+        text-align: center;
+    }
+</style>
+
+<html>
+    <script>
+        function myFunction() {
+            document.getElementById("answer").innerHTML = "Rhino";
+        }
+    </script>
+
+<head>
+    <title>Guess animals</title>
+</head>
+<body>
+    <div class= "title">
+        <h1>Guess the animals</h1>   
+    </div>
+    <h2 style="text-align: center;"><i>Guess</i></h2>
+    <p style="background-color: orange;color: red; font-size: x-large;"></p>
+
+    <img id="Example" src="1.jpg" alt="Guess the animals" width="400" height="400">
+    <img id="answer" src="2.jpg" alt='Rhino' width="400" height="400" style="display: none;">
+
+    <p>
+        <button type="button" onclick="document.getElementById('Example').src='2.jpg';myFunction()">
+            Click here for answer
+        </button>
+    </p>
+
+    <p id="answer" style="font-size: xx-large;"><b></b></p>
+
+    <div id="app">
+        <ul>
+          <li v-for="todo in todos" style="font-size: 20px;">
+            {{  todo.text   }}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                todos: [
+                    { text: 'Bird' },
+                    { text: 'Horse' },
+                    { text: 'Rhino' }
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

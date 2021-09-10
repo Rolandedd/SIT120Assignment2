@@ -1,0 +1,40 @@
+!DOCTYPE html>
+
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <h1>Task 2</h1>
+
+    <div id="component1">
+        <component_1></component_1>
+    </div>
+
+    <script>
+        Vue.components('component_1', {
+            template:'<div v-on:mouseover="changename()"><h3><span id = name>{{ name }}</spam></h3></div>',
+                data: function(){
+                    return{
+                        name: "hello world"
+                    }
+                },
+
+                methods: {
+                    changename : function(){
+                        this.name = "Thanks"
+                    }
+                }
+        })
+        var app1 = new Vue({
+            el:'$component1',
+            data:{
+
+            }
+        })
+    </script>
+</body>
+
+</html>

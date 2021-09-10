@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <body>
+
+        <div id="app1">
+            <slots v-slot:prop>
+                <component1></component1>
+            </slots>
+    
+        </div>
+    </body>
+    <script>
+        Vue.component('slots',{
+            props:['prop'],
+            template:'<div><h3><slot name="prop"></slot></h3></div>',
+        })
+
+        Vue.component('component1',{
+            template:'<div><p><slot>text in component </slot></p></div>'
+        })
+        new Vue({
+            el:'#app1',
+            data:{
+                label:"slots"
+            }
+        })
+    </script>
+    
+</html>

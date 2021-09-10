@@ -1,0 +1,62 @@
+!DOCTYPE html>
+
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <h1> Task 1</h1>
+    <div id="component1">
+        app1: 
+    <global-component></global-component>
+
+    <local-component></local-component>
+    </div>
+
+    <div id="component2">
+        app2:
+        <local-component></local-component>
+    </div>
+
+    <div id="dynamic_binding">
+        app3:
+        <component v-bind:is="dynamic_entry"></component>
+        <dynamic-component></dynamic-component>
+    </div>
+
+    <script>
+        Vue.component('global-component', {
+            template: '<h3> Here is a global_component</h3>'
+        })
+        var app1 = new Vue({
+            el: '#component1',
+            data:{
+
+            }
+        })
+
+        var app2 = new Vue({
+            el: '#component2',
+
+            components: {
+                'local-component':{
+                    template: '<h3> Local_component</h3>'
+                }
+            }
+        }) 
+
+        Vue.component('dynamic-component',{
+            template:'<h3>Component passed as data porperty to app3</h3>'
+        })
+
+        var app3 = new Vue({
+            el: '#dynamic_binding',
+            data: {
+                dynamic_entry: 'dynamic-component'
+            }
+        })
+    </script>
+    
+</body>

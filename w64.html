@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <body>
+        <h1>Task4</h1>
+        
+        <div id="app1">
+            AUD: <input type="text" v-model = "AUD"><br>
+            USD: <input type="text" v-model = "USD"><br>
+        </div>
+
+        <script>
+            var app1 = new Vue({
+                el:'#app1',
+                data:{
+                    AUD:'0',
+                    USD:'0'
+                },
+                watch:{
+                    AUD:function(val){
+                        this.AUD = val;
+                        this.USD = val * 0.74;
+                    },
+                    USD:function(val){
+                        this.USD = val;
+                        this.AUD = val / 0.74;
+                    }
+                }
+            })
+            
+        </script>
+
+    </body>
+
+</html>
+    

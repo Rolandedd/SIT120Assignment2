@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <body>
+        <div id='app1'>
+            <component1 v-bind:content="datacontent"></component1>
+        </div>
+    </body>
+
+    <script>
+        Vue.component('component1',{
+            props:['content'],
+            template:'<h3>{{content}}</h3>'
+        })
+        new Vue({
+            el:'#app1',
+            data:{
+                datacontent:'this data is rednerd Props'
+            }
+        })
+    </script>
+</html>
+    

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <h3>Task 1</h3>
+    <div id="app">
+        <p>{{ message }}</p>
+        <p>{{ detail() }}</p>
+
+        <p v-html="task2"></p>
+        <p v-html="img"></p>
+    </div>
+
+    <h3>This is task 3:</h3>
+    <div id="app2">
+        <span v-if="seen">Test text</span><br>
+        <h3>Task4</h3>
+        <p>add something to List</p>
+        Enter todo:<input ref="update">
+        <button v-on:click="update">add</button>
+        <ul>
+            <li v-for="todo in todos">
+                {{  todo.text   }}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var app = new Vue
+        ({
+            el: '#app',
+            data: {
+                message: 'hello world',
+                name: 'Jacky',
+                address: 'Burwood',
+                task2: '<h3>Task2</3>',
+                img: '<img src=3.jpg width=200px height=250px>'
+            },
+            methods: {
+                detail: function() {
+                    return "My name is " + this.name + "and now I live in" + this.address; 
+                }
+            }
+        })
+
+        var app2 = new Vue({
+            el: '#app2',
+            data: {
+                seen:true,
+                todos: [
+                    { text: 'January' },
+                    { text: 'February'},
+                    { text: 'March'},
+                ]
+            },
+
+            methods: {
+                update: function(){
+                    this.todos.push({ text: this.$refs.update.value })
+                }
+            }
+        })
+
+        var app3 = new Vue({
+            el: '#component'
+        })
+    </script>
+    
+</body>
+</html>

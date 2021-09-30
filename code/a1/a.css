@@ -1,0 +1,94 @@
+h1{
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    color: wheat;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+p{
+    font: 15px 'courier new' bold;
+    text-align: center;
+
+}
+.time{
+    text-align: center;
+}
+
+
+.button:hover{
+    background-color: #b6d11f;
+    color: black;
+}
+
+.button{    
+    border:3px outset rgb(179, 200, 245);
+    color: black;
+    background-color:#FFB533;
+
+
+    padding: 15px 32px;
+    text-align: center;
+
+}
+.login{
+    text-align: center;
+}
+
+.registered{
+    text-align: center;
+}
+.end{
+    text-align: center;
+}
+.search_left{
+    text-align: center;
+    font-size: 20px;
+    padding: 20px 40px;
+}
+.david1{
+    border:wheat;
+    border-radius: 30%;
+}
+.Varcode{
+    <style>
+    .input-val {
+      width: 200px;
+      height: 32px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+    }
+    #canvas {
+      vertical-align: middle;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      cursor: pointer;
+    }
+    .btn {
+      display: block;
+      margin-top: 20px;
+      height: 32px;
+      width: 100px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #457adb;
+      border: none;
+      border-radius: 50px;
+    }
+  </style>
+}
+
+
+
+
+img{
+    background-color: wheat;
+}
+body{
+    background-image:url("https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") ;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size:cover ;
+}
+
